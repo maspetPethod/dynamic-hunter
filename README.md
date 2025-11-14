@@ -4,11 +4,11 @@ Advanced penetration testing agent for Nerve ADK with dynamic payloads and intel
 
 ## Features
 
-- 🎯 Dynamic payload management
-- 🔍 Intelligent target analysis  
-- 📚 PortSwigger & HackerOne integration
-- 🔄 Continuous learning
-- 🚀 OWASP Top 10 2025 coverage
+-  Dynamic payload management
+-  Intelligent target analysis  
+-  PortSwigger & HackerOne integration
+-  Continuous learning
+-  OWASP Top 10 2025 coverage
 
 ## Installation
 
@@ -18,3 +18,4 @@ nerve install your-username/dynamic-hunter
 
 ## usage
 nerve run dynamic-hunter --target_url "https://example.com"
+
