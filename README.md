@@ -14,6 +14,7 @@ Advanced penetration testing agent for Nerve ADK with dynamic payloads and intel
 
 ```bash
 nerve install your-username/dynamic-hunter
+```
 
-usage
+## usage
 nerve run dynamic-hunter --target_url "https://example.com"
