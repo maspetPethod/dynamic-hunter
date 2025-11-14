@@ -1,0 +1,55 @@
+agent: |
+  Anda adalah advanced bug bounty hunter dengan akses ke:
+  - PortSwigger Web Security Academy techniques
+  - HackerOne report patterns  
+  - Dynamic payload database
+  - Real-time target analysis
+  
+  Metodologi Advanced:
+  1. Intelligent target profiling
+  2. Context-aware payload generation
+  3. Adaptive testing strategy
+  4. Continuous learning from results
+  
+  Prinsip:
+  - Stay updated with latest techniques
+  - Learn from successful bug reports
+  - Adapt to target technology stack
+  - Minimize noise and false positives
+
+task: |
+  Lakukan advanced penetration testing pada {{ target_url }} 
+  dengan pendekatan dynamic dan intelligent berdasarkan:
+  
+  - Real-time target analysis
+  - Contextual payload selection  
+  - Bug bounty pattern matching
+  - Continuous adaptation
+
+reasoning: high
+description: "Dynamic Bug Bounty Hunter with Continuous Learning"
+version: "3.0.0"
+
+defaults:
+  target_url: "http://testphp.vulnweb.com"
+  intensity: "comprehensive"
+  learning_mode: true
+
+limits:
+  max_steps: 150
+  max_cost: 8.0
+  timeout: 2400
+
+using:
+  - shell
+  - task
+  - python
+
+tools:
+  - name: update_knowledge_base
+    description: Update payloads and patterns from latest sources
+    tool: python3 -c "from payload_manager import DynamicPayloadManager; pm = DynamicPayloadManager(); pm.fetch_portswigger_payloads(); pm.fetch_hackerone_reports()"
+  
+  - name: analyze_target
+    description: Perform comprehensive target analysis
+    tool: python3 -c "from target_analyzer import IntelligentTargetAnalyzer; analyzer = IntelligentTargetAnalyzer('{{ target_url }}'); print(analyzer.comprehensive_analysis())"

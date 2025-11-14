@@ -1,0 +1,43 @@
+name: "OWASP Top 10 2025 Comprehensive Scan"
+description: "Complete penetration testing workflow"
+
+workflow:
+  - name: "reconnaissance"
+    agent: "dynamic-hunter"
+    task: |
+      Perform initial reconnaissance on {{ target_url }}
+      - Identify all endpoints and parameters
+      - Map application structure
+      - Find hidden directories and files
+    tools:
+      - analyze_target
+
+  - name: "access_control_test"
+    agent: "dynamic-hunter" 
+    task: |
+      Test Broken Access Control vulnerabilities
+      - Path traversal
+      - IDOR testing
+      - Privilege escalation
+    tools:
+      - intelligent_sqli_test
+
+  - name: "injection_test"
+    agent: "dynamic-hunter"
+    task: |
+      Comprehensive injection testing
+      - SQL Injection
+      - XSS
+      - Command Injection
+    tools:
+      - advanced_xss_hunter
+
+  - name: "intelligence_scan"
+    agent: "dynamic-hunter"
+    task: |
+      Bug bounty intelligence scan
+      - Subdomain takeover
+      - JWT vulnerabilities
+      - GraphQL introspection
+    tools:
+      - bug_bounty_intelligence_scan
